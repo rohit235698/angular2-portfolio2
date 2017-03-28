@@ -22,7 +22,8 @@
         "../node_modules/normalize.css/normalize.css",
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": ["../node_modules/jquery/dist/jquery.min.js",
+                  "./assets/js/d3.v4.min.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -58,7 +58,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 
 import 'reflect-metadata/Reflect.js';
-import 'systemjs/dist/system.src.js';
 import 'jquery/dist/jquery.js';
 /***************************************************************************************************
  * APPLICATION IMPORTS
