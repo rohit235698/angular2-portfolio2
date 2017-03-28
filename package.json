@@ -1,7 +1,7 @@
 {
-  "name": "angular2-express-starter",
+  "name": "angular2-portfolio",
   "version": "1.0.0",
-  "description": "Starter application of Angular2 with Express",
+  "description": "angular2 with Express ,Material Design,D3,Node",
   "main": "server/app.js",
   "license": "MIT",
   "scripts": {
