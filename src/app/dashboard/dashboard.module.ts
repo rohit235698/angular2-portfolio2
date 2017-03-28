@@ -1,24 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './dashboard.component';
-import { routing } from './dashboard.router';
-import { SharedModule } from '../shared/shared.module';
+
+import { MODULE_COMPONENTS, MODULE_ROUTES } from './dashboard.routes';
+import { DataService } from './service/data.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    SharedModule,
-    routing
-  ],
-  declarations: [
-    DashboardComponent
-  ],
-  bootstrap: [
-    DashboardComponent
-  ]
+    imports: [
+        RouterModule.forChild(MODULE_ROUTES),
+        CommonModule
+
+    ],
+    declarations: [ MODULE_COMPONENTS ],
+    providers: [ DataService ]
 })
-export class DashboardModule {}
+
+export class DashboardModule{}

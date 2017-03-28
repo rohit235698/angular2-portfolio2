@@ -16,6 +16,7 @@ app.disable('x-powered-by');
 app.use(json());
 app.use(compression());
 app.use(urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '/../music')));
 
 // api routes
 app.use('/api/secure', protectedRouter);
@@ -24,11 +25,8 @@ app.use('/api/public', publicRouter);
 app.use('/api/feed', feedRouter);
 app.use('/api/user', userRouter);
 
-if (app.get('env') === 'production') {
-
-  // in production mode run application from dist folder
-  app.use(express.static(path.join(__dirname, '/../client')));
-}
+app.use(express.static(path.join(__dirname, '/../../music')));
+app.use('/', express.static(__dirname + '/../client'));
 
 // catch 404 and forward to error handler
 app.use(function(req: express.Request, res: express.Response, next) {
@@ -48,3 +46,4 @@ app.use(function(err: any, req: express.Request, res: express.Response, next: ex
 });
 
 export { app }
+

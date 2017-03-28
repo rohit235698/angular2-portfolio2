@@ -1,0 +1,27 @@
+[{
+
+	"song":"Shape Of You",
+	"filename":"Shape_Of_You.mp3",
+	"singer":"Ed Sheeran",
+	"imageurl":"https://lastfm-img2.akamaized.net/i/u/770x0/80daaf62c7fbbf6ddaa143030b684e12.jpg"
+},
+{
+	"song":"No Frauds",
+	"filename":"No_Frauds.mp3",
+	"singer":"Nicki Minaj, Drake & Lil Wayne",
+	"imageurl":"https://upload.wikimedia.org/wikipedia/en/c/c5/No_Frauds_cover.jpg"
+	
+
+},
+{
+	"song" :"That's What I Like",
+	"filename" :"Thats_What_I_Like.mp3",
+	"singer" : "Bruno Mars",
+	"imageurl":"https://i1.wp.com/www.viviangist.com/wp-content/uploads/2016/11/download-mp3-bruno-mars-24k-magic.jpg"
+},
+{
+	"song" : "I Don't Wanna Live Forever",
+	"filename" : "I_Dont_Wanna_Live_Forever.mp3",
+	"singer": "Zayn / Taylor Swift",
+	"imageurl": "http://static.idolator.com/uploads/2016/12/taylor-swift-zayn-i-dont-wanna-live-forever-fifty-shades-darker-listen-1481285535-e1481899435448-620x413.jpg"
+}]

@@ -1,30 +1,36 @@
-import { Component } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Component, OnInit } from '@angular/core';
+import {LocationStrategy, PlatformLocation, Location} from '@angular/common';
 
-import { Observable } from 'rxjs/Observable';
-
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
-import { Store } from '@ngrx/store';
-import { IAppState } from './store/index';
-import { USER_GET } from './store/profile/profile.actions';
+declare var $:any;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'my-app',
+    moduleId: module.id,
+    templateUrl: 'app.component.html'
 })
-export class AppComponent {
 
-  observable$: Observable<{}>;
+export class AppComponent implements OnInit{
+    ngOnInit(){
+        $.getScript('../assets/js/material-dashboard.js');
+        $.getScript('../assets/js/initMenu.js');
+    }
+    constructor(location: PlatformLocation) {
 
-  constructor(http: Http, store: Store<IAppState>) {
-    this.observable$ = http
-      .get('/api/public/simple')
-      .map((response: Response) => response.json());
+        location.onPopState(() => {
+            // $('.sidebar-wrapper .nav-container div').removeClass('.moving-tab');
+            // $.getScript('../assets/js/material-dashboard-angular.js');
+            console.log('pressed back!');
 
-    store.dispatch({
-      type: USER_GET
-    });
-  }
+        });
+
+    }
+   /* public isMaps(path){
+        if(path == window.location.pathname){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    */
 }

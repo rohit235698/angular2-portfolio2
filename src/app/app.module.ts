@@ -1,33 +1,30 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { routing } from './app.router';
-import { effects, store, instrumentation } from './store';
-import { SharedModule } from './shared/shared.module';
-import { WeatherService } from './weather/weather.service';
+import { AppComponent }   from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { DashboardModule } from './dashboard/dashboard.module';
+import { SidebarModule } from './sidebar/sidebar.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { NavbarModule} from './shared/navbar/navbar.module';
+
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    SharedModule,
-    FormsModule,
-    HttpModule,
-    store,
-    effects,
-    routing,
-    instrumentation
-  ],
-  providers: [
-    WeatherService
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+    imports:      [
+        BrowserModule,
+        DashboardModule,
+        HttpModule,
+        SidebarModule,
+        NavbarModule,
+        FooterModule,
+        RouterModule.forRoot([])
+    ],
+    declarations: [ AppComponent, DashboardComponent ],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+    bootstrap:    [ AppComponent ]
 })
-export class AppModule {}
+export class AppModule { }

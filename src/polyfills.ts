@@ -41,6 +41,7 @@
 
 
 /** Evergreen browsers require these. **/
+import 'core-js/client/shim.min.js
 import 'core-js/es6/reflect';
 import 'core-js/es7/reflect';
 
@@ -56,7 +57,9 @@ import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 
-
+import 'reflect-metadata/Reflect.js';
+import 'systemjs/dist/system.src.js';
+import 'jquery/dist/jquery.js';
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */

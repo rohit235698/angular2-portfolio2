@@ -1,9 +1,16 @@
-<app-ui-top-navigation></app-ui-top-navigation>
-
-<app-ui-sub-navigation [title]="(observable$ | async)?.title" [description]="(observable$ | async)?.text"></app-ui-sub-navigation>
-
-<div class="main">
-  <router-outlet></router-outlet>
+<div class="wrapper">
+    <div class="sidebar" data-color='red' data-image="">
+        <sidebar-cmp></sidebar-cmp>
+        <div class="sidebar-background" style="background-image: url(../assets/img/sidebar-1.jpg)"></div>
+    </div>
+    <div class="main-panel">
+        <navbar-cmp></navbar-cmp>
+        <dashboard-cmp></dashboard-cmp>
+<!--
+        <div *ngIf="isMaps('/maps')">
+ -->
+            <footer-cmp></footer-cmp>
+<!--        </div>
+-->
+    </div>
 </div>
-
-<router-outlet name='modal'></router-outlet>
