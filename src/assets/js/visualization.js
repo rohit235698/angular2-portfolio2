@@ -10,14 +10,19 @@ $(document).ready(function () {
   audioSrc.connect(audioCtx.destination);
 
   //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
-  var frequencyData = new Uint8Array(200);
+  var frequencyData = new Uint8Array(100);
 
-  var svgHeight = '300';
-  var svgWidth = '1000';
-  var barPadding = '1';
+  var svgHeight = '400';
+  var svgWidth = '100%';
+  var barPadding = '3';
 
+  /*var $container = $('#visualization'),
+        svgWidth = $container.width(),
+        svgHeight = $container.height();
+*/
   function createSvg(parent, height, width) {
-    return d3.select(parent).append('svg').attr('height', height).attr('width', width);
+    return d3.select(parent).append('svg').attr("height", height).attr("width", width)
+    .attr('viewBox','0 0 300 100');
   }
 
   var svg = createSvg('#visualization', svgHeight, svgWidth);
@@ -28,9 +33,9 @@ $(document).ready(function () {
      .enter()
      .append('rect')
      .attr('x', function (d, i) {
-        return i * (svgWidth / frequencyData.length);
+        return i * (300 / frequencyData.length);
      })
-     .attr('width', svgWidth / frequencyData.length - barPadding);
+     .attr('width', 500 / frequencyData.length - barPadding);
 
   // Continuously loop and update chart with frequency data.
   function renderChart() {
@@ -43,13 +48,13 @@ $(document).ready(function () {
      svg.selectAll('rect')
         .data(frequencyData)
         .attr('y', function(d) {
-           return svgHeight - d;
+           return 200 - d;
         })
         .attr('height', function(d) {
            return d;
         })
         .attr('fill', function(d) {
-          return 'rgb( '+d+' , '+d+' , '+d+')';
+          return 'rgb( '+d+','+d+' , '+d+')';
         });
   }
 
