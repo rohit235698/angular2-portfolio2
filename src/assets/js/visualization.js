@@ -54,7 +54,7 @@ $(document).ready(function () {
            return d;
         })
         .attr('fill', function(d) {
-          return 'rgb( '+d+','+d+' , '+d+')';
+          return 'rgb( 0 ,'+d+' , '+d+')';
         });
   }
 
