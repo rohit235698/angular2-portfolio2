@@ -14,6 +14,7 @@ $(window).resize(function(){
     mda.initSidebarCheck();
 
 });
+
 mda = {
     initSidebarCheck: function(){
         if($(window).width() <= 991){

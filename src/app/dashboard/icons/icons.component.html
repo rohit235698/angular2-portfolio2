@@ -1,24 +1,64 @@
-
 <div class="main-content">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-plain">
-                    <div class="card-header" data-background-color="red">
-                        <h4 class="title">Material Design Icons</h4>
-                        <p class="category">Handcrafted by our friends from <a target="_blank" href="https://design.google.com/icons/">Google</a></p>
-                    </div>
-                    <div class="card-content">
-                        <div class="iframe-container hidden-sm hidden-xs">
-                            <iframe src="https://design.google.com/icons/">
-                                <p>Your browser does not support iframes.</p>
-                            </iframe>
+        <div class="card">
+            <div class="card-header" data-background-color="red">
+                <h2 class="title">Project Details</h2>
+                <p class="category">{{ project.title }}</p>
+            </div>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Amount Pledged</h5>
+                        <div class="alert alert-info">
+                            <h4>${{project['amt.pledged']}}</h4>
                         </div>
-                        <div class="col-md-6 hidden-lg hidden-md text-center">
-                            <h5>The icons are visible on Desktop mode inside an iframe. Since the iframe is not working on Mobile and Tablets please visit the icons on their original page on Google. Check the  <a href="https://design.google.com/icons/" target="_blank">Material Icons</a></h5>
+                        <h5>Project By</h5>
+                         <div class="alert alert-info">
+                            <h4>{{project.by}}</h4>
+                        </div>
+                         <h5>Currency</h5>
+                        <div class="alert alert-info">
+                            <h4>${{project.currency}}</h4>
+                        </div>
+                         <h5>location</h5>
+                        <div class="alert alert-info">
+                            <h4>{{project.location}}</h4>
+                        </div>
+                          <h5>Percentage Funded(%)</h5>
+                        <div class="alert alert-info">
+                            <h4>{{project['percentage.funded']}}</h4>
+                        </div>
+                         <h5>Type</h5>
+                        <div class="alert alert-info">
+                            <h4>{{project.type}}</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Blurb(short Description)</h5>
+                        <div class="alert alert-info">
+                            <h4>{{project['blurb']}}</h4>
+                        </div>
+                          <h5>Country</h5>
+                         <div class="alert alert-info">
+                            <h4>{{project.country}}</h4>
+                        </div>
+                          <h5>End time</h5>
+                        <div class="alert alert-info">
+                            <h4>{{project['end.time'] |date:'medium'}}</h4>
+                        </div>
+                          <h5>Number of backers</h5>
+                        <div class="alert alert-info">
+                            <h4>{{project['num.backers']}}</h4>
+                        </div>
+                         <h5>State</h5>
+                        <div class="alert alert-info">
+                            <h4>{{project.state}}</h4>
                         </div>
                     </div>
                 </div>
+                <br>
+                <br>
+
             </div>
         </div>
     </div>

@@ -22,8 +22,8 @@
         "../node_modules/normalize.css/normalize.css",
         "styles.css"
       ],
-      "scripts": ["../node_modules/jquery/dist/jquery.min.js",
-                  "./assets/js/d3.v4.min.js"],
+      "scripts": ["../node_modules/underscore/underscore-min.js",
+                  "../node_modules/jquery/dist/jquery.min.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({
     selector: 'icons-cmp',
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
     templateUrl: 'icons.component.html'
 })
 
-export class IconsComponent{}
+export class IconsComponent{
+
+	project = {};
+	framesrc = '';
+	constructor(private service : DataService ){
+	this.project = service.getSelectedProject();
+	}
+}

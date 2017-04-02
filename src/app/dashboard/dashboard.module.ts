@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { MODULE_COMPONENTS, MODULE_ROUTES } from './dashboard.routes';
 import { DataService } from './service/data.service';
+import { PagerService } from './service/pager.service';
 
 @NgModule({
     imports: [
@@ -13,7 +14,7 @@ import { DataService } from './service/data.service';
 
     ],
     declarations: [ MODULE_COMPONENTS ],
-    providers: [ DataService ]
+    providers: [ DataService ,PagerService]
 })
 
 export class DashboardModule{}

@@ -1,7 +1,7 @@
 {
-  "name": "angular2-portfolio",
+  "name": "gieom-angular2-portfolio",
   "version": "1.0.0",
-  "description": "angular2 with Express ,Material Design,D3,Node",
+  "description": "Gieom front end Challenge Solution.",
   "main": "server/app.js",
   "license": "MIT",
   "scripts": {
@@ -15,10 +15,7 @@
     "_server:build": "tsc -p ./server",
     "postinstall": "npm run build"
   },
-  "author": "Vlado Tešanović",
-  "repository": {
-    "url": "https://github.com/vladotesanovic/angular2-express-starter"
-  },
+
   "private": true,
   "dependencies": {
     "@angular/cli": "1.0.0-rc.0",
@@ -53,6 +50,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "~3.1.1",
     "jsonwebtoken": "^5.7.0",
+    "ng2-bootstrap": "^1.6.1",
     "ngrx-store-freeze": "^0.1.6",
     "normalize.css": "^5.0.0",
     "path": "^0.12.7",
@@ -66,19 +64,28 @@
     "zone.js": "^0.7.6"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.1",
+    "@types/request": "0.0.42",
+    "@types/underscore": "^1.8.0",
+    "cheerio": "^0.22.0",
     "codelyzer": "~2.0.0",
+    "concurrently": "^3.1.0",
+    "cors": "^2.8.3",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
-    "protractor": "~5.1.0",
-    "concurrently": "^3.1.0",
     "karma-remap-istanbul": "^0.2.1",
     "nodemon": "^1.11.0",
+    "protractor": "~5.1.0",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3",
     "webdriver-manager": "10.2.5"
-  }
+  },
+  "author": "Rohit Koranga",
+  "license": "ISC"
 }
