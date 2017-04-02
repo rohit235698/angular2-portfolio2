@@ -12,7 +12,8 @@ export class DataService {
 
   private projects = [];
   private searchedProject = [];
-  private projectsUrl = 'http://starlord.hackerearth.com/kickstarter';
+  private projectsUrl = '/projects';
+  //http://starlord.hackerearth.com/kickstarter';
   private sortByTitle = '';
   private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
   private options = new RequestOptions({ headers: this.headers });
