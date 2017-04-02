@@ -5,7 +5,8 @@
 - ExpressJS ( 4.x - with compression )
 - Webpack ( angular-cli )
 
-[![Live Portfolio](https://cryptic-earth-54512.herokuapp.com/)]
+[![Live Portfolio](https://www.herokucdn.com/deploy/button.png)](https://cryptic-earth-54512.herokuapp.com/)
+
 
 ## Concepts
 
